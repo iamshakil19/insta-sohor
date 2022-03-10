@@ -15,3 +15,16 @@
 Question 1) Javascript কিভাবে কাজ করে ?
 Question 2) Javascript এর ইভেন্ট লুপ কি কাজ করে ?
 Question 3) Different Between Local Storage vs Session Storage.
+
+
+
+২. ternary অপারেটর কি ? এইটা দিয়ে শর্টকার্টে কিভাবে if-else লিখে 
+*/
+const isBodyFit = false
+const money = 500;
+let food = money > 600 ? 'nanna biriani' : 'murgir kacci';
+console.log(food);
+
+// aker odhik sorto dite hole () er vitor dite hoeb 
+let drink = (money > 100 && isBodyFit == true) ? 'coke' : 'pani khaia basay ja';
+console.log(drink);
