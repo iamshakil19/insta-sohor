@@ -1,85 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
+
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
+
+        <!--================ Question Answer ==============-->
+        <section id="question-section" class="my-5 w-50 mx-auto">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            জাভাস্ক্রিপ্ট কিভাবে কাজ করে ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">জাভাস্ক্রিপ্ট একটি ইন্টারপ্রেটেট ল্যাঙ্গুয়েজ। এটি ব্রাউজারে V8 নামক
+                            এক ইঞ্জিনের সাহায্যে চলে। জাভাস্ক্রিপ্ট লাইন বাই লাইন কোড এক্সিকিউট করে এবং এর পাশাপাশি V8
+                            যে ইঞ্জিন টা আছে তার নিজস্ব কিছু ( JIT = Just In Time ) কম্পাইলার দিয়ে কোডকে এক্সিকিউট করে।
+                        </div>
+                    </div>
                 </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            জাভাস্ক্রিপ্টের ইভেন্ট লুপ কি কাজ করে ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">ইভেন্ট লুপ হচ্ছে একটা লুপের মত করে কার করে।
+                            সিরিয়াল বাই যখন কোডগুলো এক্সিকিউট করতে থাকে তখন Asynchronous জিনিস গুলোকে পাশে ওয়েটিং লিস্টে
+                            রেখে দিয়ে বাকি গুলোকে এক্সিকিউট করে তারপর ওয়েটিং লিস্টে যারা ছিলো তাদের যখন সময় হয় তখন
+                            তাদেরকে সিরিয়াল বাই এক্সিকিউট করে। এতে করে কোন কোন যায়গায় যদি setTimeout ১ মিনিট দেওয়া থাকে
+                            তার ঐ টাইম না হওয়া অবদি তার পরের কোড গুলোর ঐ ১ মিনিট শেষ হওয়ার জন্য প্রহর গোনা লাগতো যে কখন
+                            শেষ হবে, কিন্তু ইভেন্ট লুপের মাধ্যমে সেটার সমাধান হয়েছে। asynchronous জিনিস গুলোকে Queue তে
+                            রেখে পরে আস্তে আস্তে এক্সিকিউট করে।</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            লোকাল স্টোরেজ এবং সেশন স্টোরেজের মধ্যে পার্থক্য কি ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <span class="fw-bolder">লোকাল স্টোরেজ</span>
+                            <br>
+                            1) লোকাল স্টোরেজ সব ট্যাবের জন্য কাজ করে।
+                            <br>
+                            2) ব্রাউজার বা ট্যাব বন্ধ করে দিলেও লোকাল স্টোরেজের ডাটা থাকে।
+                            <br>
+                            3) লোকাল স্টোরেজের সাইজ 10MB
+                            <br>
+                            4) লোকাল স্টোরেজের ডাটা ম্যানুয়াল ভাবে ডিলিট করতে হয়।
+                            <br>
+                            <br>
+                            <span class="fw-bolder">সেশন স্টোরেজ</span>
+                            <br>
+                            1) সেশন স্টোরেজ একটি ট্যাবের জন্য কাজ করে।
+                            <br>
+                            2) ব্রাউজার বা ট্যাব বন্ধ করে দিলে সেশন স্টোরেজের ডাটা থাকে না।
+                            <br>
+                            3) সেশন স্টোরেজের সাইজ 5MB
+                            <br>
+                            4) সেশন স্টোরেজের ডাটা ব্রাউজার বা ট্যাব বন্ধ করে দিলেই চলে যায়।
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+        </section>
+    </main>
+    <footer></footer>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
-        </main>
-        <footer></footer>
 
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+</body>
+
 </html>

@@ -10,8 +10,8 @@
 
 (Bonus Marks Task)
 
-1) মিনিমাম ৬টা কমিট করতে হবে।
+1) মিনিমাম ৬টা কমিট করতে হবে। (Done)
 2) HTML এ নিচের দিকে নতুন একটা সেকশনে মিনিমাম ৩টার ভিতর ২টার Question এর Ans করতে হবে।
-Question 1) Javascript কিভাবে কাজ করে ?
-Question 2) Javascript এর ইভেন্ট লুপ কি কাজ করে ?
-Question 3) Different Between Local Storage vs Session Storage.
+Question 1) Javascript কিভাবে কাজ করে ? (Done)
+Question 2) Javascript এর ইভেন্ট লুপ কি কাজ করে ? (Done)
+Question 3) Different Between Local Storage vs Session Storage. (Done)
