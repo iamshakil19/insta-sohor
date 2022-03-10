@@ -22,13 +22,12 @@ const addToLiked = (id) => {
 };
 
 const reportPost = (id) => {
-    reportedPostsId.push(id);
-    const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+  reportedPostsId.push(id);
+  const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
     showPosts(remainingPosts);
 };
 
 const displayContent = (text) => {
-  console.log(text.length);
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -154,8 +153,9 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  document.getElementById('reported').textContent = '';
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });

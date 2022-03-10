@@ -2,9 +2,9 @@
 
 1) লাইক / হার্ট বাটন কাজ করে না।
 2) পোস্টে প্রোফাইলে ইউজারের ছবি দেখানোর কথা কিন্তু দেখাচ্ছে না। (Done)
-3) Post Caption যদি 30 Character এর বেশি যায় তাহলে ...Read More করে দিতে হবে আর 30 এর কম হলে পুরটা দেখাতে হবে।
+3) Post Caption যদি 30 Character এর বেশি যায় তাহলে ...Read More করে দিতে হবে আর 30 এর কম হলে পুরটা দেখাতে হবে। (Done)
 4) কমেন্টে কে কমেন্টে করছে & কি করছে সেটা Undefined আসে। (Done)
-5) রিপোর্ট সেকশনে গেলে সব পোস্ট দেখা যাচ্ছে অথচ শুধু মাত্র রিপোর্ট করা গুলো কে দেখানোর কথা।
+5) রিপোর্ট সেকশনে গেলে সব পোস্ট দেখা যাচ্ছে অথচ শুধু মাত্র রিপোর্ট করা গুলো কে দেখানোর কথা। (Done)
 6) লাইক দেওয়া পোস্ট গুলো বার বার রিপিট হচ্ছে - লাইক সেকশন থেকে Home এ গিয়ে আবার লাইক সেকশনে গেলে।
 
 
@@ -15,16 +15,3 @@
 Question 1) Javascript কিভাবে কাজ করে ?
 Question 2) Javascript এর ইভেন্ট লুপ কি কাজ করে ?
 Question 3) Different Between Local Storage vs Session Storage.
-
-
-
-২. ternary অপারেটর কি ? এইটা দিয়ে শর্টকার্টে কিভাবে if-else লিখে 
-*/
-const isBodyFit = false
-const money = 500;
-let food = money > 600 ? 'nanna biriani' : 'murgir kacci';
-console.log(food);
-
-// aker odhik sorto dite hole () er vitor dite hoeb 
-let drink = (money > 100 && isBodyFit == true) ? 'coke' : 'pani khaia basay ja';
-console.log(drink);
